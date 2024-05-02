@@ -403,7 +403,7 @@ namespace Environment {
      * @param distance_unit describe parameter here, eg: 1
      * @param pin describe parameter here, eg: DigitalPin.P16
      */
-    //% blockId=readsonarbit block="Ultrasonic distance in unit %distance_unit |at|pin %pin"
+    //% blockId=readsonarbit block="ultrasonický snímač vzdialenosti v %distance_unit na pine %pin"
     export function sonarbit_distance(distance_unit: Distance_Unit, pin: DigitalPin): number {
 
         // send pulse
@@ -444,7 +444,7 @@ namespace Environment {
      * @param dht11pin describe parameter here, eg: DigitalPin.P15
      */
     //% advanced=true
-    //% blockId="readdht11" block="hodnota senzora dht11 %dht11type| na pine %dht11pin"
+    //% blockId="readdht11" block="%dht11type| senzora dht11 na pine %dht11pin"
     export function dht11value(dht11type: DHT11Type, dht11pin: DigitalPin): number {
         const DHT11_TIMEOUT = 100
         const buffer = pins.createBuffer(40)
@@ -630,7 +630,7 @@ namespace Environment {
      * get water level value (0~100)
      * @param waterlevelpin describe parameter here, eg: AnalogPin.P1
      */
-    //% blockId="readWaterLevel" block="hodnota výšky hladiny vody(0~100) na pine %waterlevelpin"
+    //% blockId="readWaterLevel" block="meranie výšky hladiny vody(0~100) na pine %waterlevelpin"
     export function ReadWaterLevel(waterlevelpin: AnalogPin): number {
         let voltage = 0;
         let waterlevel = 0;
@@ -652,7 +652,7 @@ namespace Environment {
      * @param windspeedpin describe parameter here, eg: AnalogPin.P1
      */
     //% advanced=true
-    //% blockId="readwindspeed" block="hodnota rýchlosti vetra(m/s) na pine %windspeedpin"
+    //% blockId="readwindspeed" block="meranie rýchlosti vetra(m/s) na pine %windspeedpin"
     export function ReadWindSpeed(windspeedpin: AnalogPin): number {
         let voltage = 0;
         let windspeed = 0;
@@ -673,7 +673,7 @@ namespace Environment {
      * get noise value (dB)
      * @param noisepin describe parameter here, eg: AnalogPin.P1
      */
-    //% blockId="readnoise" block="hluk(dB) na pine %noisepin"
+    //% blockId="readnoise" block="meranie hluku(dB) na pine %noisepin"
     export function ReadNoise(noisepin: AnalogPin): number {
         let level = 0
         let voltage = 0
@@ -784,7 +784,7 @@ namespace Environment {
         return Math.round(noise)
     }
 
-    //% block="hodnota senzora BME280 %state"
+    //% block="%state senzoru BME280"
     export function octopus_BME280(state: BME280_state): number {
         switch (state) {
             case 0:
@@ -812,7 +812,7 @@ namespace Environment {
     * TODO: Detect soil moisture value(0~100%)
     * @param soilmoisturepin describe parameter here, eg: DigitalRJPin.J1
     */
-    //% blockId="PIR" block="PIR senzor %pin zachytil pohyb"
+    //% blockId="PIR" block="PIR senzor na pine %pin zachytil pohyb"
     export function PIR(pin: DigitalPin): boolean {
         if (pins.digitalReadPin(pin) == 1) {
             return true
