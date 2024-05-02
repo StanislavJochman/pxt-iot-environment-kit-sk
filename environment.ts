@@ -78,7 +78,7 @@ namespace Environment {
     let Reference_VOLTAGE = 3100
 
     export enum DHT11Type {
-        //% block="temperature(℃)" enumval=0
+        //% block="teplota(℃)" enumval=0
         DHT11_temperature_C,
 
         //% block="teplota(℉)" enumval=1
