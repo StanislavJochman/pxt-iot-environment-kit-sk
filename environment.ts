@@ -81,7 +81,7 @@ namespace Environment {
         //% block="temperature(℃)" enumval=0
         DHT11_temperature_C,
 
-        //% block="temperature(℉)" enumval=1
+        //% block="teplota(℉)" enumval=1
         DHT11_temperature_F,
 
         //% block="humidity(0~100)" enumval=2
@@ -102,16 +102,16 @@ namespace Environment {
 
 
     export enum BME280_state {
-        //% block="temperature(℃)" enumval=0
+        //% block="teplota(℃)" enumval=0
         BME280_temperature_C,
 
-        //% block="humidity(0~100)" enumval=1
+        //% block="vlhkosť(0~100)" enumval=1
         BME280_humidity,
 
-        //% block="pressure(hPa)" enumval=2
+        //% block="tlak(hPa)" enumval=2
         BME280_pressure,
 
-        //% block="altitude(M)" enumval=3
+        //% block="nadmorská výška(M)" enumval=3
         BME280_altitude,
     }
 	
@@ -296,10 +296,10 @@ namespace Environment {
     let ack = 0
     let lastTemp = 0
     export enum ValType {
-        //% block="temperature(℃)" enumval=0
+        //% block="teplota(℃)" enumval=0
         DS18B20_temperature_C,
 
-        //% block="temperature(℉)" enumval=1
+        //% block="teplota(℉)" enumval=1
         DS18B20_temperature_F
     }
     function init_18b20(mpin:DigitalPin) {
@@ -373,7 +373,7 @@ namespace Environment {
      * @param vLED describe parameter here, eg: DigitalPin.P16
      * @param vo describe parameter here, eg: AnalogPin.P1
      */
-    //% blockId="readdust" block="value of dust(μg/m³) at LED %vLED| out %vo"
+    //% blockId="readdust" block="počet prachových častí(μg/m³) na LEDke %vLED| na výstupe %vo"
     export function ReadDust(vLED: DigitalPin, vo: AnalogPin): number {
         let voltage = 0;
         let dust = 0;
