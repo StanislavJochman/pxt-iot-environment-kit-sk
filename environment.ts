@@ -547,7 +547,7 @@ namespace Environment {
      * @param pm25pin describe parameter here, eg: DigitalPin.P14
      */
     //% advanced=true
-    //% blockId="readpm25" block="hodnota častíc pm2.5(μg/m³) na pine %pm25pin"
+    //% blockId="readpm25" block="meranie počtu častíc pm2.5(μg/m³) na pine %pm25pin"
     export function ReadPM25(pm25pin: DigitalPin): number {
         let pm25 = 0
         while (pins.digitalReadPin(pm25pin) != 0) {
@@ -568,7 +568,7 @@ namespace Environment {
      * @param pm10pin describe parameter here, eg: DigitalPin.P13     
      */
     //% advanced=true
-    //% blockId="readpm10" block="hodnota častíc pm10(μg/m³) na pine %pm10pin"
+    //% blockId="readpm10" block="meranie počtu častíc pm10(μg/m³) na pine %pm10pin"
     export function ReadPM10(pm10pin: DigitalPin): number {
         let pm10 = 0
         while (pins.digitalReadPin(pm10pin) != 0) {
@@ -590,7 +590,7 @@ namespace Environment {
      * get soil moisture value (0~100)
      * @param soilmoisturepin describe parameter here, eg: AnalogPin.P1
      */
-    //% blockId="readsoilmoisture" block="hodnota vlhkosti pôdy(0~100) na pine %soilhumiditypin"
+    //% blockId="readsoilmoisture" block="meranie vlhkosti pôdy(0~100) na pine %soilhumiditypin"
     export function ReadSoilHumidity(soilmoisturepin: AnalogPin): number {
         let voltage = 0;
         let soilmoisture = 0;
