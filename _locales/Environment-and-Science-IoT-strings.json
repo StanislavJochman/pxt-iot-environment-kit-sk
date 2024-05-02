@@ -31,6 +31,6 @@
   "Environment.readDataBlock|block": "čítanie údajov z karty cez IIC port s využitím RFID snímača",
   "Environment.writeData|block": "zápis %data na kartu cez IIC port s využitím RFID snímač",
   "Environment.checkCard|block": "detekcia karty cez IIC port s využitím RFID snímača",
-  "Environment|block": "Octopus",
-  "{id:category}Environment": "Senzory prostredia"
+  "Environment|block": "Senzory prostredia",
+  "{id:category}Environment": "Environment"
 }
