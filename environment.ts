@@ -444,7 +444,7 @@ namespace Environment {
      * @param dht11pin describe parameter here, eg: DigitalPin.P15
      */
     //% advanced=true
-    //% blockId="readdht11" block="value of dht11 %dht11type| at pin %dht11pin"
+    //% blockId="readdht11" block="hodnota senzora dht11 %dht11type| na pine %dht11pin"
     export function dht11value(dht11type: DHT11Type, dht11pin: DigitalPin): number {
         const DHT11_TIMEOUT = 100
         const buffer = pins.createBuffer(40)
@@ -547,7 +547,7 @@ namespace Environment {
      * @param pm25pin describe parameter here, eg: DigitalPin.P14
      */
     //% advanced=true
-    //% blockId="readpm25" block="value of pm2.5(μg/m³) at pin %pm25pin"
+    //% blockId="readpm25" block="hodnota častíc pm2.5(μg/m³) na pine %pm25pin"
     export function ReadPM25(pm25pin: DigitalPin): number {
         let pm25 = 0
         while (pins.digitalReadPin(pm25pin) != 0) {
@@ -568,7 +568,7 @@ namespace Environment {
      * @param pm10pin describe parameter here, eg: DigitalPin.P13     
      */
     //% advanced=true
-    //% blockId="readpm10" block="value of pm10(μg/m³) at pin %pm10pin"
+    //% blockId="readpm10" block="hodnota častíc pm10(μg/m³) na pine %pm10pin"
     export function ReadPM10(pm10pin: DigitalPin): number {
         let pm10 = 0
         while (pins.digitalReadPin(pm10pin) != 0) {
@@ -590,7 +590,7 @@ namespace Environment {
      * get soil moisture value (0~100)
      * @param soilmoisturepin describe parameter here, eg: AnalogPin.P1
      */
-    //% blockId="readsoilmoisture" block="value of soil moisture(0~100) at pin %soilhumiditypin"
+    //% blockId="readsoilmoisture" block="hodnota vlhkosti pôdy(0~100) na pine %soilhumiditypin"
     export function ReadSoilHumidity(soilmoisturepin: AnalogPin): number {
         let voltage = 0;
         let soilmoisture = 0;
@@ -610,7 +610,7 @@ namespace Environment {
      * get light intensity value (0~100)
      * @param lightintensitypin describe parameter here, eg: AnalogPin.P1
      */
-    //% blockId="readlightintensity" block="value of light intensity(0~100) at pin %lightintensitypin"
+    //% blockId="readlightintensity" block="množstvo svetla(0~100) na pine %lightintensitypin"
     export function ReadLightIntensity(lightintensitypin: AnalogPin): number {
         let voltage = 0;
         let lightintensity = 0;
@@ -630,7 +630,7 @@ namespace Environment {
      * get water level value (0~100)
      * @param waterlevelpin describe parameter here, eg: AnalogPin.P1
      */
-    //% blockId="readWaterLevel" block="value of water level(0~100) at pin %waterlevelpin"
+    //% blockId="readWaterLevel" block="hodnota výšky hladiny vody(0~100) na pine %waterlevelpin"
     export function ReadWaterLevel(waterlevelpin: AnalogPin): number {
         let voltage = 0;
         let waterlevel = 0;
@@ -652,7 +652,7 @@ namespace Environment {
      * @param windspeedpin describe parameter here, eg: AnalogPin.P1
      */
     //% advanced=true
-    //% blockId="readwindspeed" block="value of wind speed(m/s) at pin %windspeedpin"
+    //% blockId="readwindspeed" block="hodnota rýchlosti vetra(m/s) na pine %windspeedpin"
     export function ReadWindSpeed(windspeedpin: AnalogPin): number {
         let voltage = 0;
         let windspeed = 0;
@@ -673,7 +673,7 @@ namespace Environment {
      * get noise value (dB)
      * @param noisepin describe parameter here, eg: AnalogPin.P1
      */
-    //% blockId="readnoise" block="value of noise(dB) at pin %noisepin"
+    //% blockId="readnoise" block="hluk(dB) na pine %noisepin"
     export function ReadNoise(noisepin: AnalogPin): number {
         let level = 0
         let voltage = 0
@@ -784,7 +784,7 @@ namespace Environment {
         return Math.round(noise)
     }
 
-    //% block="value of BME280 %state"
+    //% block="hodnota senzora BME280 %state"
     export function octopus_BME280(state: BME280_state): number {
         switch (state) {
             case 0:
@@ -825,7 +825,7 @@ namespace Environment {
     * get UV level value (0~15)
     * @param waterlevelpin describe parameter here, eg: AnalogRJPin.J1
     */
-    //% blockId="readUVLevel" block="UV sensor %Rjpin level(0~15)"
+    //% blockId="readUVLevel" block="UV senzor %Rjpin level(0~15)"
     export function UVLevel(pin: AnalogPin): number {
         let UVlevel = pins.analogReadPin(pin);
         if (UVlevel > 625) {
@@ -843,7 +843,7 @@ namespace Environment {
         /**
     * toggle led
     */
-    //% blockId=LED block="LED %pin toggle to $ledstate || brightness %brightness \\%"
+    //% blockId=LED block="LED %pin prepni na $ledstate || brightness %brightness \\%"
     //% brightness.min=0 brightness.max=100
     //% ledstate.shadow="toggleOnOff"
     //% expandableArgumentMode="toggle"
@@ -858,7 +858,7 @@ namespace Environment {
         }
     }
 
-    //% block="RFID sensor IIC port read data from card"
+    //% block="čítanie údajov z karty cez IIC port s využitím RFID snímača"
     export function readDataBlock(): string {
         if (NFC_ENABLE === 0) {
             wakeup();
@@ -895,7 +895,7 @@ namespace Environment {
         }
         return ""
     }
-    //% block="RFID sensor IIC port write %data to card"
+    //% block="zápis %data na kartu cez IIC port s využitím RFID snímač"
     export function writeData(data: string): void {
         let len = data.length
         if (len > 16) {
@@ -906,7 +906,7 @@ namespace Environment {
         }
         writeblock(blockData);
     }
-    //% block="RFID sensor IIC port Detect Card"
+    //% block="detekcia karty cez IIC port s využitím RFID snímača"
     export function checkCard(): boolean {
         if (NFC_ENABLE === 0) {
             wakeup();
