@@ -1,7 +1,7 @@
 /**
  * Custom blocks
  */
-//% color=#ff7a4b icon="\uf0ee" block="test"
+//% color=#ff7a4b icon="\uf0ee" block="Octopus"
 namespace Environment {
 
     let weatherMonitorStarted = false;
@@ -340,7 +340,7 @@ namespace Environment {
         }
         return dat
     }
-    //% block="value of DS18B20 %state at pin %pin"
+    //% block="hodnota tepelného senzora DS18B20 %state na pine %pin"
     export function Ds18b20Temp(pin:DigitalPin,state:ValType):number{
         init_18b20(pin)
         write_18b20(pin,0xCC)
