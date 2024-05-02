@@ -27,7 +27,7 @@
   "Environment.dht11value|block": "hodnota senzora dht11 %dht11type| na pine %dht11pin",
   "Environment.ledBrightness|block": "LED %pin prepni na $ledstate || brightness %brightness \\%",
   "Environment.octopus_BME280|block": "hodnota senzora BME280 %state",
-  "Environment.sonarbit_distance|block": "Ultrasonický snímač vzdialenosti v %distance_unit na pine %pin",
+  "Environment.sonarbit_distance|block": "ultrasonický snímač vzdialenosti v %distance_unit na pine %pin",
   "Environment.readDataBlock|block": "čítanie údajov z karty cez IIC port s využitím RFID snímača",
   "Environment.writeData|block": "zápis %data na kartu cez IIC port s využitím RFID snímač",
   "Environment.checkCard|block": "detekcia karty cez IIC port s využitím RFID snímača",
