@@ -14,7 +14,7 @@
   "Environment.Ds18b20Temp|block": "teplota senzoru DS18B20 %state na pine %pin",
   "Environment.PIR|block": "PIR senzor na pine %Rjpin zachytil pohyb",
   "Environment.ReadDust|block": "počet prachových častí(μg/m³) na LEDke %vLED| na výstupe %vo",
-  "Environment.ReadLightIntensity|block": "množstvo svetla(0~100) na pine %lightintensitypin",
+  "Environment.ReadLightIntensity|block": "meranie intenzity svetla(0~100) na pine %lightintensitypin",
   "Environment.ReadNoise|block": "hluk(dB) na pine %noisepin",
   "Environment.ReadPM10|block": "meranie častíc pm10(μg/m³) na pine %pm10pin",
   "Environment.ReadPM25|block": "meranie častíc pm2.5(μg/m³) na pine %pm25pin",

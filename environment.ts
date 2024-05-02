@@ -340,7 +340,7 @@ namespace Environment {
         }
         return dat
     }
-    //% block="hodnota tepelného senzora DS18B20 %state na pine %pin"
+    //% block="teplota senzoru DS18B20 %state na pine %pin"
     export function Ds18b20Temp(pin:DigitalPin,state:ValType):number{
         init_18b20(pin)
         write_18b20(pin,0xCC)
@@ -610,7 +610,7 @@ namespace Environment {
      * get light intensity value (0~100)
      * @param lightintensitypin describe parameter here, eg: AnalogPin.P1
      */
-    //% blockId="readlightintensity" block="množstvo svetla(0~100) na pine %lightintensitypin"
+    //% blockId="readlightintensity" block="meranie intenzity svetla(0~100) na pine %lightintensitypin"
     export function ReadLightIntensity(lightintensitypin: AnalogPin): number {
         let voltage = 0;
         let lightintensity = 0;
