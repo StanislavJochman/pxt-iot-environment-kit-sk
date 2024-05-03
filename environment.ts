@@ -1,7 +1,7 @@
 /**
  * Custom blocks
  */
-//% color=#ff7a4b icon="\uf0ee" block="Senzory prostredia"
+//% color=#ff7a4b icon="\1F333" block="Senzory prostredia"
 namespace Environment {
 
     let weatherMonitorStarted = false;
