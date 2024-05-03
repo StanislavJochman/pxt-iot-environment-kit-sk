@@ -5,9 +5,9 @@
     "license": "MIT",
     "dependencies": {
         "core": "*",
-        "SSD1306_OLED": "github:stanislavjochman/pxt-oled-ssd1306-sk#master",
-        "ds1307": "github:stanislavjochman/pxt-ds1307-rtc-sk#master",
-        "ESP8266_IoT": "github:stanislavjochman/pxt-esp8266iot-sk#master"
+        "SSD1306_OLED": "github:stanislavjochman/pxt-oled-ssd1306-sk#v1.0.0",
+        "ds1307": "github:stanislavjochman/pxt-ds1307-rtc-sk#v1.0.0",
+        "ESP8266_IoT": "github:stanislavjochman/pxt-esp8266iot-sk#v0.0.6"
     },
     "files": [
         "environment.ts",
